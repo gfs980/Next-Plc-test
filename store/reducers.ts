@@ -4,7 +4,7 @@ import * as types from "./types";
 import { SearchResultActionTypes } from "./types";
 
 // INITIAL TIMER STATE
-const initialTimerState: ItunesDataStore = {
+export const initialResultsState: ItunesDataStore = {
 	resultCount: null,
 	results: []
 };
@@ -19,8 +19,8 @@ export interface ApplicationState {
 }
 
 // TIMER REDUCER
-const timerReducer = (
-	state = initialTimerState,
+export const resultReducer = (
+	state = initialResultsState,
 	{ type, payload }: SearchResultActionTypes
 ) => {
 	switch (type) {
@@ -33,7 +33,7 @@ const timerReducer = (
 
 // COMBINED REDUCERS
 const reducers = {
-	results: timerReducer
+	results: resultReducer
 };
 
 export default combineReducers(reducers);

@@ -12,6 +12,8 @@ export type ItunesDataResult = {
 	collectionName: string;
 	trackName: string;
 	collectionCensoredName: string;
+	collectionArtistName?: string;
+	contentAdvisoryRating?: string;
 	trackCensoredName: string;
 	artistViewUrl: string;
 	collectionViewUrl: string;
@@ -22,7 +24,7 @@ export type ItunesDataResult = {
 	artworkUrl100: string;
 	collectionPrice: number;
 	trackPrice: number;
-	releaseDate: Date;
+	releaseDate: string;
 	collectionExplicitness: string;
 	trackExplicitness: string;
 	discCount: number;

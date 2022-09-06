@@ -16,9 +16,9 @@ const ResultItem: React.FC<ResultItemProps> = props => {
 				alt={props.item.collectionName}
 			/>
 			<div className="details">
-				<span>Artist: {props.item.artistName}</span>
-				<span>Albums: {props.item.collectionName}</span>
-				<span>Song: {props.item.trackName}</span>
+				<span data-testid="artist">Artist: {props.item.artistName}</span>
+				<span data-testid="album">Albums: {props.item.collectionName}</span>
+				<span data-testid="song">Song: {props.item.trackName}</span>
 			</div>
 			<style jsx>{`
 				.result-item {
